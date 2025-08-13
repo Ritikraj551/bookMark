@@ -1,0 +1,51 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@theme {
+  /* Fonts */
+  --font-sans: "Raleway", sans-serif;
+  --font-opensans: "Open Sans", sans-serif;
+
+  /* Screen breakpoints */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1020px;
+  --breakpoint-xl: 1440px;
+}
+
+.ficon {
+  transition: all 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ficon:hover {
+    filter: invert(66%) sepia(43%) saturate(720%) hue-rotate(103deg)
+      brightness(95%) contrast(85%);
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .ficon:hover {
+    filter: invert(29%) sepia(90%) saturate(707%) hue-rotate(240deg)
+      brightness(93%) contrast(92%);
+    transform: scale(1.2);
+    cursor: pointer;
+  }
+}
+
+.ficon {
+  transition: all 0.3s ease;
+}
+
+.ficon:hover {
+  filter: invert(29%) sepia(90%) saturate(707%) hue-rotate(240deg)
+    brightness(93%) contrast(92%);
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.dark .ficon:hover {
+  filter: invert(66%) sepia(43%) saturate(720%) hue-rotate(103deg)
+    brightness(95%) contrast(85%);
+}
