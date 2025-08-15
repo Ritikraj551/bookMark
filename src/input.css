@@ -41,6 +41,12 @@
     left: 30%;
     @apply absolute rounded-l-full top-52 bg-blue-500;
   }
+  .bgTabs {
+    width: 2000px;
+    height: 300px;
+    right: 70%;
+    @apply absolute rounded-r-full top-70 bg-blue-500;
+  }
 }
 
 .ficon {
