@@ -54,13 +54,60 @@
 }
 
 .ficon:hover {
-  filter: invert(29%) sepia(90%) saturate(707%) hue-rotate(240deg)
+  filter: invert(41%) sepia(100%) saturate(750%) hue-rotate(190deg)
     brightness(93%) contrast(92%);
   transform: scale(1.2);
   cursor: pointer;
 }
 
-.dark .ficon:hover {
-  filter: invert(66%) sepia(43%) saturate(720%) hue-rotate(103deg)
-    brightness(95%) contrast(85%);
+/* Hamburger menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  top: 0;
+  left: 0;
+  background: #000;
+  transform: rotate(0);
+  transition: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+  position: fixed;
+  top: 45px;
+  right: 80px;
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+  background: #fff;
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+  background: #fff;
 }
